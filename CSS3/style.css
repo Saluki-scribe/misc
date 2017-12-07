@@ -1,0 +1,98 @@
+#box {
+    background: red;
+    height: 200px;
+    width: 200px;
+    margin: 40px auto;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/*Colors*/
+
+body#colors {
+    background: rgba(25, 52, 84, 1);
+    color: white;
+}
+
+#colors #container {
+    width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#colors #box {
+   /*background: linear-gradient(green, blue);*/
+    background: radial-gradient(red, orange, yellow, green, blue, purple);
+}
+
+/*Shadows*/
+
+#shadows #container {
+    width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #9a76a1;
+    box-shadow: 5px 5px 5px black;
+}
+
+#shadows h1 {
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+/*Columns*/
+
+#three-columns {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+
+    -webkit-column-style: solid;
+    column-rule-style: solid;
+
+    -webkit-column-rule-width: .5px;
+
+    -webkit-column-rule-color: #ddd;
+}
+
+/*Animations & Transitions*/
+
+@keyframes box {
+    from { border-radius: 40px; background-color: red; top: 0; left: 0; }
+    to { border-radius: 100px; background-color: darkred; top: 100px; left: 100px; }
+}
+
+#animations #box {
+    position: relative;
+    animation-name: box;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+
+#box2 {
+    background: blue;
+    width: 200px;
+    height: 200px;
+    color: white;
+    position: relative;
+}
+
+#box2:hover {
+    background: darkblue;
+    width: 300px;
+    height: 300px;
+    top: -20px;
+    left: 30px;
+    transition: all 4s;
+}
