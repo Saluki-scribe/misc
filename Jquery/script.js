@@ -23,4 +23,38 @@ $(function() {
 
     //$("div:contains('Tara')").css("color", "red");
 
+
+    /*--------------------
+    jQUERY EVENT METHODS
+    ---------------------*/
+
+    $("#box").click(function() {
+        alert("you just clicked the box!");
+    });
+
+    $("input").blur(function() {
+
+        if( $(this).val() == "") {
+            $(this).css("border", "solid 1px red");
+            $("#box").text("You forgot to add text!");
+        }
+
+    });
+
+    $("input").keydown(function() {
+        if( $(this).val !== "") {
+            $(this).css("border", "solid 1px #777");
+            $("#box").text("Yaaay, there's text!");
+        }
+    });
+
+    $("#box").hover(function() {
+        $(this).text("you hovered!");
+    }, function() {
+        $(this).text("aww, no more hover...");
+    });
+
+    
+
+
 });
