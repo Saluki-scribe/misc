@@ -54,7 +54,9 @@ $(function() {
         $(this).text("aww, no more hover...");
     });
 
-    
+    /*JQUERY CHAINING */
+
+    $(".notification-bar").delay(1000).slideDown().delay(1000).fadeOut();
 
 
 });
