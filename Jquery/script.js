@@ -60,3 +60,25 @@ $(function() {
 
 
 });
+
+/* -------------------------------
+   jQUERY HIDE/SHOW
+   ------------------------------- */
+
+  // $("h1").hide();
+  //$("div.hidden").show();
+
+  //$("p").fadeout();
+  //$("div.hidden").fadeIn(4000);
+  $("#box1").click(function() {
+      $(this).fadeTo(2000, 0.25, function() {
+          $(this).slideUp();
+      });
+
+      $("div.hidden").slideDown();
+
+      $("button").click(function() {
+          $("#box1").slideToggle();
+      })
+    
+  });
