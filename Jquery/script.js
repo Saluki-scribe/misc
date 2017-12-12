@@ -116,11 +116,11 @@ $("#right").click(function() {
 
 });
 
-$("#left").click(function() {
+$("#down").click(function() {
     
     $(".box").animate({
-        left: "-=40px",
-        fontSize: "+=2px"
+        top: "+=40px",
+        opacity: "-=0.1"
     }, function() {
         
     }); 
