@@ -59,8 +59,6 @@ $(function() {
     $(".notification-bar").delay(1000).slideDown().delay(1000).fadeOut();
 
 
-});
-
 /* -------------------------------
    jQUERY HIDE/SHOW
    ------------------------------- */
@@ -71,14 +69,40 @@ $(function() {
   //$("p").fadeout();
   //$("div.hidden").fadeIn(4000);
   $("#box1").click(function() {
-      $(this).fadeTo(2000, 0.25, function() {
-          $(this).slideUp();
-      });
+    $(this).fadeTo(2000, 0.25, function() {
+        $(this).slideUp();
+    });
 
-      $("div.hidden").slideDown();
+    $("div.hidden").slideDown();
 
-      $("button").click(function() {
-          $("#box1").slideToggle();
-      })
-    
-  });
+    $("button").click(function() {
+        $("#box1").slideToggle();
+    })
+  
+});
+
+/* -------------------------------
+ jQUERY ANIMATE
+ ------------------------------- */
+$("#left").click(function() {
+
+    $(".box").animate({
+        left: "-=40px"
+    }, function() {
+        
+    }); 
+
+});
+
+
+
+
+
+
+
+
+
+
+
+});
+
