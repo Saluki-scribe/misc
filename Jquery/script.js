@@ -105,11 +105,11 @@ $("#up").click(function() {
 
 });
 
-$("#left").click(function() {
+$("#right").click(function() {
     
     $(".box").animate({
-        left: "-=40px",
-        fontSize: "+=2px"
+        left: "+=40px",
+        fontSize: "-=2px"
     }, function() {
         
     }); 
