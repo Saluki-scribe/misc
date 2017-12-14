@@ -139,7 +139,7 @@ $("#circle2").css({
     "line-height": "140px", 
     "height": "140px", 
     "width": "140px"
-});
+}).addClass("circleShape");
 
 
 
