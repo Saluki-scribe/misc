@@ -1,5 +1,40 @@
 <?php 
-    define("TITLE", "Honest Click Bait Headlines")
+    define("TITLE", "Recipes for Monsters");
+
+    if( isset( $_POST["fix_submit"] )) {
+        $clickBait = strtolower($_POST["clickbait_headline"]);
+
+        $a = array(
+            "milk",
+            "eggs",
+            "butter",
+            "cheese",
+            "cream",
+            "chicken",
+            "beef",
+            "pork",
+            "potatoes",
+            "cinnamon",
+            "nutmeg",
+            "spices"
+        );
+
+        $b = array(
+            "blood",
+            "spider eggs",
+            "mucus",
+            "guts",
+            "blood",
+            "crow",
+            "rotting flesh",
+            "human flesh",
+            "eyeballs",
+            "ashes",
+            "ashes",
+            "ashes"
+        );
+
+    }
 ?>
 
 <!DOCTYPE html>
