@@ -1,40 +1,9 @@
 <?php 
     define("TITLE", "Recipes for Monsters");
+    include("functions.php");
 
     if( isset( $_POST["fix_submit"] )) {
-        $recipe = strtolower($_POST["normal_recipe"]);
-
-        $a = array(
-            "milk",
-            "eggs",
-            "butter",
-            "cheese",
-            "cream",
-            "chicken",
-            "beef",
-            "pork",
-            "potatoes",
-            "cinnamon",
-            "nutmeg",
-            "spices"
-        );
-
-        $b = array(
-            "blood",
-            "spider eggs",
-            "mucus",
-            "guts",
-            "blood",
-            "crow",
-            "rotting flesh",
-            "human flesh",
-            "eyeballs",
-            "ashes",
-            "ashes",
-            "ashes"
-        );
-
-        $monsterRecipe = str_replace( $a, $b, $recipe);
+        checkForRecipe();
     }
 ?>
 
@@ -48,29 +17,30 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         <title><?php echo TITLE; ?></title>
+        <link rel="stylesheet" type="text/css" href="assets/style.css">
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
 
     <body>
-        <div class="container">
+        <div class="container" id="background">
             <h1><?php echo(TITLE); ?></h1>
             <p class="lead">Are you expecting undead, monstrous, or otherwise supernaturally terrifying guests? Just add a run of the mill recipe, and we'll convert it into a meal any monster would love!</p>
 
             <div class="row">
                 <form class="col-sm-8 col-sm-offset-2" action="" method="post">
                     <textarea placeholder="Paste recipe ingredients here" class="form-control input-lg" name="normal_recipe"></textarea><br>
-                    <button type="submit" class="btn btn-primary btn-lg pull-right" name="fix_submit">Make Monstrous!</button>
+                    <button type="submit" class="btn btn-danger btn-lg pull-right" name="fix_submit">Make Monstrous!</button>
                 </form>
             </div>
 
             <?php 
                 if (isset($_POST["fix_submit"])) {
-                    echo ("<strong class='text-danger'>Normal Recipe</strong>
-                    <h4>".$recipe. "</h4><hr>");
 
-                    echo ("<strong class='text-success'>Monster Recipe</strong>
-                    <h4>".$monsterRecipe. "</h4>");
+                    $recipe = checkForRecipe()[0];
+                    $monsterRecipe = checkForRecipe()[1];
+
+                    displayMonsterRecipe( $recipe, $monsterRecipe);
                 }
             ?>
 

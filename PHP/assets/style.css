@@ -1,0 +1,16 @@
+body {
+    background: url("background.jpg") no-repeat fixed center;
+}
+
+#background {
+    background-color: rgba(20, 20, 20, .8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#background h1 {
+    color: red;
+    text-align: center;
+}
