@@ -6,6 +6,7 @@
         $a = array(
             "milk",
             "eggs",
+            "egg",
             "butter",
             "cheese",
             "cream",
@@ -20,12 +21,14 @@
             "sugar",
             "salt",
             "pepper",
-            "onions"
+            "onions",
+            "vanilla"
         );
 
         $b = array(
             "blood",
             "spider eggs",
+            "spider egg",
             "mucus",
             "guts",
             "blood",
@@ -40,7 +43,8 @@
             "ghost plasma",
             "powdered bone",
             "graveyard dirt",
-            "dead man's nails"
+            "dead man's nails",
+            "putrid blood"
         );
 
         $monsterRecipe = str_replace( $a, $b, $recipe);

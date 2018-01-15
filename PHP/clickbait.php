@@ -29,7 +29,7 @@
 
             <div class="row">
                 <form class="col-sm-8 col-sm-offset-2" action="" method="post">
-                    <textarea placeholder="Paste recipe ingredients here" class="form-control input-lg" name="normal_recipe"></textarea><br>
+                    <textarea placeholder="Paste recipe here" class="form-control input-lg" name="normal_recipe"></textarea><br>
                     <button type="submit" class="btn btn-danger btn-lg pull-right" name="fix_submit">Make Monstrous!</button>
                 </form>
             </div>
