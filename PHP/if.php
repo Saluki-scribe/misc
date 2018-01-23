@@ -1,3 +1,7 @@
+<?php 
+    define( "TITLE", "If, Else &amp; Elseif Statements" );
+?>
+
 <!DOCTYPE html>
 <html>
     
