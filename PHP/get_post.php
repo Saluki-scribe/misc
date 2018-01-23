@@ -66,8 +66,13 @@
                 <hr>
             
             <h4>Submitted to current page</h4>
+            <p class="text-danger">* Required fields</p>
+
             <form action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF'] ); ?>" method="post">
+                <small class="text-danger">* <?php echo $nameError;?></small>
                 <input type="text" placeholder="Name" name="post_name">
+
+                <small class="text-danger">* <?php echo $nameError;?></small>
                 <input type="text" placeholder="Email" name="post_email">
                 <input type="submit" name="post_submit">
             </form>
