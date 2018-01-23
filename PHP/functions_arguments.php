@@ -34,7 +34,16 @@
 
                 //call the function
 
-                myFirstFunction();
+              //  myFirstFunction();
+
+                function mySecondFunction( $x ) {
+                    do {
+                        echo "$x &nbsp;";
+                        $x++;
+                    } while( $x <= 10 );
+                }
+
+                mySecondFunction( 1 );
 
             ?>
         </div>
