@@ -24,8 +24,17 @@
             <?php 
 
                 function myFirstFunction () {
-                    
+                    $a = 0;
+
+                    do{
+                        echo "$a &nbsp;";
+                        $a++;
+                    } while( $a <= 100);
                 }
+
+                //call the function
+
+                myFirstFunction();
 
             ?>
         </div>
