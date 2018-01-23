@@ -21,12 +21,37 @@
 
             <?php 
                 $startingNum = 50;
-
+                //WHILE LOOP
                 while ($startingNum <= 100) {
                     echo "$startingNum is pretty puny!<br>";
 
                     $startingNum++;
                 }
+
+                //FOR LOOP
+
+                for ($i = 20; $i <= 30; $i++) {
+                    echo "Number $i <br>";
+                }
+
+                //FOREACH LOOP
+                $friends = array("Miles", "Russell", "Hikari", "Jan", "Mr. Poopiebuttface");
+
+                foreach ( $friends as $friend) {
+
+                    //output each individual value in the array
+                    echo "$friend is my friend! <br>";
+
+                }
+
+                //DO WHILE LOOP - Will always execute the first time
+                $foo = 10;
+                do {
+                    echo "I will always love $foo. <br>";
+                    $foo++;
+
+                } while ( $foo <= 10);
+
             ?>
 
         </div>
