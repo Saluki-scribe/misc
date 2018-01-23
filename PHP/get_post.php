@@ -21,7 +21,7 @@
             
             <h1><?php echo TITLE; ?></h1>
             
-            <form action="form_get.php">
+            <form action="form_get.php" method="get">
                 <input type="text" placeholder="Name" name="name">
                 <input type="text" placeholder="Email" name="email">
                 <input type="submit" name="form_submit">
