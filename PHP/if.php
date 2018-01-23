@@ -26,12 +26,16 @@
             //IF expression is FALSE, don't do anything
 
                 $foo = 99;
-                $bar = 79;
+                $bar = 109;
                 if ( $foo > $bar) {
-                    echo "$foo is greater than $bar!";
+                    echo "$foo is greater than $bar!"; 
+                    //If you have variables in double quotes, their values will display on the screen
+                    //If you use single quotes, you'll get the actual variable names on the screen
+                } else {
+                    echo "$foo is NOT greater than $bar. :(";
                 }
             ?>
-            
+
         </div>
     </body>
 
