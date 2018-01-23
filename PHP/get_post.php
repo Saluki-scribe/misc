@@ -26,6 +26,12 @@
                 <input type="text" placeholder="Email" name="email">
                 <input type="submit" name="form_submit">
             </form>
+
+            <form action="form_post.php" method="post">
+                <input type="text" placeholder="Name" name="post_name">
+                <input type="text" placeholder="Email" name="post_email">
+                <input type="submit" name="post_submit">
+            </form>
         </div>
     </body>
 
