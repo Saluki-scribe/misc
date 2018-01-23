@@ -45,6 +45,13 @@
 
                 mySecondFunction( 1 );
 
+                function addTogether ($x, $y) {
+                    $sum = $x + $y;
+                    echo "$x + $y = $sum.";
+                }
+
+                addTogether(34, 899);
+
             ?>
         </div>
 
