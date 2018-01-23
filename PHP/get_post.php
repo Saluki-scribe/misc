@@ -1,5 +1,31 @@
 <?php 
     define( "TITLE", "Get &amp; Post");
+
+    if( isset( $_POST["form_submit"] ) ) {
+
+        // build a function that validates data
+        function validateFormData( $formData ) {
+            $formData = trim( stripslashes( htmlspecialchars( $formData) ) );
+            return $formData;
+        }
+
+        //check to see if inputs are empty
+        //create variables with form data
+        //wrap the data with our function
+
+        if( !$_POST["name"]) {
+            $nameError = "Please enter your name <br>";
+        } else {
+            $name = validateFormData($_POST["name"] );
+        }
+
+        if( !$_POST["email"]) {
+            $emailError = "Please enter your email <br>";
+        } else {
+            $email = validateFormData($_POST["email"] );
+        }
+
+    }
 ?>
 
 <!DOCTYPE html>
@@ -21,17 +47,32 @@
             
             <h1><?php echo TITLE; ?></h1>
             
+            <h4>Submitted via $_GET</h4>
             <form action="form_get.php" method="get">
                 <input type="text" placeholder="Name" name="name">
                 <input type="text" placeholder="Email" name="email">
                 <input type="submit" name="form_submit">
             </form>
 
+                <hr>
+            
+            <h4>Submitted via $_POST</h4>
             <form action="form_post.php" method="post">
                 <input type="text" placeholder="Name" name="post_name">
                 <input type="text" placeholder="Email" name="post_email">
                 <input type="submit" name="post_submit">
             </form>
+
+                <hr>
+            
+            <h4>Submitted to current page</h4>
+            <form action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF'] ); ?>" method="post">
+                <input type="text" placeholder="Name" name="post_name">
+                <input type="text" placeholder="Email" name="post_email">
+                <input type="submit" name="post_submit">
+            </form>
+
+
         </div>
     </body>
 
