@@ -13,24 +13,26 @@
 
         <title><?php echo TITLE; ?></title>
 
-        
-        <?php 
-        
-        //IF expression is TRUE, do something
-        //IF expression is FALSE, don't do anything
-
-            $foo = 99;
-            $bar = 79;
-            if ( $foo > $bar) {
-                echo "$foo is greater than $bar!";
-            }
-        ?>
-
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
 
     <body>
-    
+        <div class="container">
+            <h1><?php echo TITLE; ?></h1>
+
+            <?php 
+                
+            //IF expression is TRUE, do something
+            //IF expression is FALSE, don't do anything
+
+                $foo = 99;
+                $bar = 79;
+                if ( $foo > $bar) {
+                    echo "$foo is greater than $bar!";
+                }
+            ?>
+            
+        </div>
     </body>
 
 </html>
