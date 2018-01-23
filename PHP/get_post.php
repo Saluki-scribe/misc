@@ -1,7 +1,7 @@
 <?php 
     define( "TITLE", "Get &amp; Post");
 
-    if( isset( $_POST["form_submit"] ) ) {
+    if( isset( $_POST["post_submit"] ) ) {
 
         // build a function that validates data
         function validateFormData( $formData ) {
@@ -13,16 +13,16 @@
         //create variables with form data
         //wrap the data with our function
 
-        if( !$_POST["name"]) {
+        if( !$_POST["post_name"]) {
             $nameError = "Please enter your name <br>";
         } else {
-            $name = validateFormData($_POST["name"] );
+            $name = validateFormData($_POST["post_name"] );
         }
 
-        if( !$_POST["email"]) {
+        if( !$_POST["post_email"]) {
             $emailError = "Please enter your email <br>";
         } else {
-            $email = validateFormData($_POST["email"] );
+            $email = validateFormData($_POST["post_email"] );
         }
 
     }
@@ -70,13 +70,20 @@
 
             <form action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF'] ); ?>" method="post">
                 <small class="text-danger">* <?php echo $nameError;?></small>
-                <input type="text" placeholder="Name" name="post_name">
+                <input type="text" placeholder="Name" name="post_name"><br><br>
 
-                <small class="text-danger">* <?php echo $nameError;?></small>
-                <input type="text" placeholder="Email" name="post_email">
+                <small class="text-danger">* <?php echo $emailError;?></small>
+                <input type="text" placeholder="Email" name="post_email"><br><br>
+
                 <input type="submit" name="post_submit">
             </form>
 
+            <?php 
+                if( isset($_POST["post_submit"]) ) {
+                    echo "<h4>Your info</h4>";
+                    echo "$name <br> $email <br>";
+                }
+            ?>
 
         </div>
     </body>
