@@ -19,6 +19,7 @@
           <p class="blog-post-meta"><?php echo $post['post-date']; ?> by <?php echo $post['post-author']; ?></p>
 
           <?php echo $post['post-content']; ?>
+          
         </div><!-- /.blog-post -->
 
         <?php } ?>
